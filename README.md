@@ -9,9 +9,9 @@ Project Objectives
 -To maintain two user portals: one for employees and one for HR representatives.
 
 Datasets used:
--FER2013 for facial expressions
--RAVDESS for audio 
--Glassdoor company reviews for the textual sentiment analysis
+-FER2013 for facial expressions (sourced from Kaggle.com)
+-RAVDESS for audio (sourced from Zenodo.org)
+-Glassdoor company reviews for the textual sentiment analysis (sourced from Kaggle.com)
 
 The emotions mapped are happy, neutral, sad and stressed. As mentioned before the stress-related states are internally flagged and recorded for historical data for a given employee. When an employee is flagged as “stressed,” the system fetches less cognitively demanding alternate tasks. Tasks are suggested based on department, skill set, and previously completed work. A database-level trigger or Django signal is used to notify HR in real-time. Only HR has access to historical emotional logs of employees. The database used is the Django's in-built dbsqlite3 database management system.
 
